@@ -1,0 +1,72 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+.Python
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Testing / static analysis
+.pytest_cache/
+.mypy_cache/
+
+# IDE/editor folders
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and runtime outputs
+*.log
+output.csv
+resources/output.csv
+
+# Secrets, credentials and environment files
+.env
+.env.*
+credentials.json
+token.json
+secrets.*
+*.key
+*.pem
+*.crt
+*.cer
+
+# Model artifacts and large binaries (often sensitive or large)
+models/*.joblib
+models/*.pkl
+models/*.bin
+models/*.pt
+models/*.ckpt
+models/*.onnx
+models/*.h5
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Wheel/cache
+pip-wheel-metadata/
+wheelhouse/
+
+# SQLite / DB
+*.sqlite3
+*.db
+
+# Compiled extensions
+*.so
+*.dylib
+
+# Keep this file tracked
+!.gitignore
