@@ -3,7 +3,7 @@ from sentence_transformers import SentenceTransformer
 
 model_embedding = SentenceTransformer('all-MiniLM-L6-v2')  # Lightweight embedding model
 model_classification = joblib.load("models/log_classifier.joblib")
-
+encoder= joblib.load("models/encoders.joblib")
 
 def classify_with_bert(log_message):
     embeddings = model_embedding.encode([log_message])
@@ -12,7 +12,9 @@ def classify_with_bert(log_message):
         return "Unclassified"
     predicted_label = model_classification.predict(embeddings)[0]
     
-    return predicted_label
+    label = encoder.inverse_transform([predicted_label])
+    
+    return label[0]
 
 
 if __name__ == "__main__":
